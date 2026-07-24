@@ -158,3 +158,4 @@ Next job is to go into drag and thrust modelling now I have a basic simulator se
 
 Before I move on I forgot I made a tests folder, I will test the integration works properly, this can be used for any value and makes the validity of results a lot easier to get, instead of just knowing it works for one result.
 
+Ok now I am going to use Matplotlib to plot the graph of the motion using the history feature I added to plot a poit every delta t.

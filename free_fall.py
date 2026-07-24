@@ -13,3 +13,6 @@ final_state = history[-1] #get the final state of the system after the simulatio
 print(f"Final state: t={final_state.t:.2f} s, x={final_state.x:.2f} m, v={final_state.v:.2f} m/s") #print the final state of the system after the simulation has run.
 total_steps = len(history) #get the total number of steps taken in the simulation.
 print(f"Total steps: {total_steps}") #print the total number of steps taken in the simulation.
+
+from smsim.visualisation.plots import plot_free_fall #import the plot_free_fall function from the visualisation module.
+plot_free_fall(history) #plot the results of the simulation using the plot_free_fall

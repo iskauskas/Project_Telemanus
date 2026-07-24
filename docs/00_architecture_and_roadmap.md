@@ -30,7 +30,7 @@ Project Telemanus/
 │       ├── physics/           
 │       │   ├── constants.py       # G, g0, R_earth, atmosphere constants and many more
 │       │   ├── kinematics.py      # displacement/velocity/acceleration relationships
-│       │   └── integrators.py     # Euler, RK4 — generic ODE steppers - as of now I am not too sure about these but am aware they are needed
+│       │   └── integrators.py     # Euler, RK4 — generic ODE steppers - as of now I am not too sure about these but am aware they are needed and that RK4 may be better
 │       │
 │       ├── rocket/            # everything about the vehicle itself
 │       │   ├── rocket.py          # mass, thrust, fuel state
@@ -144,10 +144,17 @@ Cut from the 3-month scope by design, not oversight — worth stating this plain
 - **Hohmann transfers, simple autopilot, 3D visualisation** — meaningful next steps if the project continues beyond the application cycle.
 
 ---
+### 3. Notebook and Process
 
 That was the initial roadmap, anything note worthy and new will be addedd from here on out;
 
 
 So my inital plan is too simply make an enviroment where I will drop a ball, for now only gravity will act on it. Initially I thought that I could use constant 9.81 gravity but then remembered that drag, fuel burns and altitude all have effects on it, so we have to go back to base principles. we can use 9.81 to make sure that the equation is correct however. Eulers intergration is able to solve differential equations numerically by seperating it into many steps, letting you estimate where you will be a tiny biy ahead. So to make this work we will clearly need a class which can contain time, displacement and velocity. we will also need to be able to create the next small step after each calculation so a step function is needed. then simply loop this.
 Ok after testing a free fall under eulers integration to find gravity at a dt of 0.1 i ended up with -45.11 as the final velocity even though it should be -44.3 when using SUVAT equations. So i want to reduce this error gap, maybe by reducing the dt. with a dt of 0.01 i got an answer of -44.42 which is a lot closer, now I will try with a dt of 0.001 and see what I get. With this new dt I got the answer exactly correct, which makes sense as the smaller the dt the closer the tangents will be to the actual curve. there is a slight over shoot with the displacement due to it not being a perfect curve that I am making, but the lower the dt the closer it gets to this curve and the less overshoot occurs.
+
+Overhalled the README section so that it briefly talks about what I have done in this project so far and some goals I have hit, also linked this document to it for more in depth review.
+
+Next job is to go into drag and thrust modelling now I have a basic simulator set up.
+
+Before I move on I forgot I made a tests folder, I will test the integration works properly, this can be used for any value and makes the validity of results a lot easier to get, instead of just knowing it works for one result.
 

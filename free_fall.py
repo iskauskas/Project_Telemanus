@@ -2,7 +2,7 @@
 print("Running free fall test...") #print a message to indicate that the free fall test is running.
 from smsim.simulation.state import State
 from smsim.simulation.simulator import run_simulation
-from smsim.physics.intergrators import euler_step
+from smsim.physics.integrators import euler_step
 
 initial = State(t=0, x=100, v=0) #initial state of the system. 100 meters above the ground, with no initial velocity.
 

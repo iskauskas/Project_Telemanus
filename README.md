@@ -8,7 +8,7 @@ This project uses A-level maths and physics as a starting point, then pushes int
 
 The full architecture, 3-month roadmap, and a running journal of my decisions, experiments, and results (including things that didn't work first time) are documented here:
 
-➡️ **[docs/00_architecture_and_roadmap.md](docs/00_architecture_and_roadmap.md)**
+**[docs/00_architecture_and_roadmap.md](docs/00_architecture_and_roadmap.md)**
 
 I'd genuinely recommend reading that over this README if you want to see the actual thinking behind the project, not just the end result.
 

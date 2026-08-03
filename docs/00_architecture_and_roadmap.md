@@ -159,3 +159,9 @@ Next job is to go into drag and thrust modelling now I have a basic simulator se
 Before I move on I forgot I made a tests folder, I will test the integration works properly, this can be used for any value and makes the validity of results a lot easier to get, instead of just knowing it works for one result.
 
 Ok now I am going to use Matplotlib to plot the graph of the motion using the history feature I added to plot a poit every delta t.
+
+I was able to learn how to use Matplotlib and plot the displacement, speed and acceleration on three sperate graphs, revealing a constant g0 of -9.81 which is exactly what I was aiming to do as i found gravity using the integration not just saying acceleration is going to be -9.81, this will be very useful for future tests that are more complicated and have varying acceleration.
+
+okay now the next step will be to try add atmospheric drag, this has not been taught to me before so i will have to teach it to myself and make sure I understand the physics behind it. After learning abiyt the drag formula and the fact that it now means I cant cancel mass I will have to go back on myself to change the gravity stuff, also I will need to facctor in the direction of the velocity as that will change the drag direction too.
+
+After completing the test with atmospheric drag, which took longer than expected, I was able to see clearly that the drag from the air decereases the acceleration over time and therefore decreased the landing speed and increased time taken to land compared to the previous test, even though it was done assuming air pressure was cosntant it shows the effect of drag very well for now and can be seen clearly when graphed how it affects the acceleration and velocity.
